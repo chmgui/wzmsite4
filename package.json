@@ -313,7 +313,7 @@
     "yargs-parser": "^18.1.3",
     "yeast": "^0.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": { "@11ty/eleventy": "^2.0.0"},
   "scripts": {
     "build": "env NODE_ENV=production npx eleventy --pathprefix 'wzms3'",
     "serve": "npx eleventy --serve",
