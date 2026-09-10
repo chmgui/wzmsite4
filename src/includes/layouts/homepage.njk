@@ -1,0 +1,380 @@
+{% extends "base.njk" %}
+
+
+
+{% block pageHeader %}{% endblock pageHeader %}
+
+{% block content %}
+
+<div data-spy="scroll" data-target="#menu" data-offset="0">
+
+<div class="hero-slider"  style="background-color: #e9edf5">
+  {% for banner in banners %}
+   <div class="single-slide"> 
+ 
+
+    <div class="inner">
+    <div class="container">
+        <div class="row">
+        <br>
+            <div class="col-md-6">
+                
+                <div class="slide-content">
+
+
+           
+                   <h3>{{ banner.headline | striptags(true) | escape | nl2br }}</h3>  
+                    <br>
+              
+                    <h5><p>{{ banner.blurb | striptags(true) | escape | nl2br }}</p> </h5> 
+               
+                    <!--
+                    <a href="{{ about.link.url }}" class="button">{{  about.link.text }}</a>
+                    -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-img">
+                    <img src="{{ banner.background | url }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!--
+<div class="about-area sp" id="anc_about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-content">  
+-->
+                 <!--   <h3>{{ about.title }}</h3>  -->
+           
+                 <!--   <h3>{{ about.title | striptags(true) | escape | nl2br }}</h3>  -->
+
+                    <!-- <p>{{ about.description }}</p> -->
+              
+                <!--    <p>{{ about.description | striptags(true) | escape | nl2br }}</p>  -->
+               
+                    <!--
+                    <a href="{{ about.link.url }}" class="button">{{  about.link.text }}</a>
+                    -->
+<!--
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-img">
+                <br>
+                    <img src="{{ about.image | url }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+-->
+
+ <div class="service-area spt" id="anc_services">
+    <div class="container">
+        <div class="section-title" data-margin="0 0 40px">
+            <h2>{{ services.title }}</h2>
+            <p>{{ services.description }}</p>
+        </div>
+        <div class="row">
+           {% for service in collections.services %}
+            <div class="col-md-4 single-service-2">
+                <div class="inner">
+                    <div class="title">
+                        <div class="icon">
+                            <i class="fa fa-{{ service.data.faIcon }}"></i>
+                        </div>
+                        <h4>{{ service.data.title }}</h4>
+                    </div>
+                    <div class="content">
+                        <p>{{ service.data.description }}</p>
+                    </div>
+                </div>
+            </div>
+             {% endfor %}
+    </div>
+</div>     
+
+<!--
+<div class="testimonial-area sp" id="anc_pricing">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ pricing.title }}</h2>
+            <p>{{ pricing.description }}</p>
+        </div>
+    </div>
+</div>    
+-->
+
+<!--
+
+<div class="about-area sp" id="anc_pricing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-content">  
+                
+                     <h2>{{ pricing.title }}</h2>
+           
+                    <h3>{{ pricing.title | striptags(true) | escape | nl2br }}</h3>
+
+              
+              
+                    <p>{{ pricing.description | striptags(true) | escape | nl2br }}</p>
+               
+
+                  
+                    <a href="{{ about.link.url }}" class="button">{{  about.link.text }}</a>
+                   
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>  
+-->
+
+
+<!--
+<div class="testimonial-area sp" id="anc_testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ testimonials.title }}</h2>
+            <p>{{ testimonials.description }}</p>
+        </div>
+        <div class="testimonial-slider bordered">
+         {% for testimonial in collections.testimonials %}
+            <div class="single-slide">
+                <div class="inner">
+                    <p>{{ testimonial.data.quote }}</p>
+                    <div class="client-info">
+                        <div class="client-img">
+                            <img src="{{ testimonial.data.headshot | url }}" alt="client">
+                        </div>
+                        <div class="client-data">
+                            <h4>{{ testimonial.data.name }}</h4>
+                            <span>{{ testimonial.data.jobTitle }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>    
+-->
+
+<div class="pricing-area sp" id="anc_pricing">
+
+    <div class="container">
+    
+        <div class="section-title">
+            <h2>Pricing</h2>
+            <!--
+            <p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+            -->
+        </div>
+    
+        <div class="row">
+            <div class="col-md-6 col-lg-4 single-pricing">
+                <div class="inner">
+                   <div class="title">
+                        <h2>Website<br> Development</h2>
+                        
+                        <div class="price">
+                            <span>from US$199</span>
+                            <!--
+                            <span>US$199</span>
+                            -->
+                        </div>
+                        
+                   </div>
+                   <ul>
+                       <li>No recurring hosting fee.</li>
+                        <li>For as little as US$199, you can get a website like this site. 
+                        We use the latest technologies, e.g., JAMStack, to create lightning fast websites. 
+                        </li>
+                        <!--and host them on free web hosting 
+                        platorms like <a href="https://pages.github.com/" target="_blank">Github Pages</a>.</li> -->
+
+                        <li>Intranet and Ecommerce - ask for quote.</li>
+                   </ul>
+                   <a href="{{ '/' | url }}#anc_contact" class="button">Request for quote</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 single-pricing active">
+                <div class="inner">
+                   <div class="title">
+                        <h2>Server Install<br>&nbsp;</h2>
+                        <div class="price">
+                            <span>from US$499</span>
+                            <!--
+                            <span>2 month</span>
+                            -->
+                        </div>
+                   </div>
+                    <ul>
+                        <li>Server install with single application.</li>
+                        <li>Example: Linux server with file server software Samba.</li>
+                        <li>Cloud server install.</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                   </ul>
+                   <a href="{{ '/' | url }}#anc_contact" class="button">Request for quote</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 single-pricing">
+                <div class="inner">
+                   <div class="title">
+                        <h2>Security<br>&nbsp;</h2>
+                        <div class="price">
+                            <span>from US$499</span>
+                        </div>
+                   </div>
+                   <ul>
+                        <li>VPN (OpenVPN or IPSec), PFSense firewall, Data Encryption, OS hardening.
+                        Special security projects like complaince with Microsoft Supplier Security and Privacy Assurance, etc.</li>
+                        <li>&nbsp;</li>
+                   </ul>
+                   <a href="{{ '/' | url }}#anc_contact" class="button">Request for quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% block contactformsubmitted %}
+<div class="contact-area sp"  id="anc_contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ contact.title }}</h2>
+           <!--  <p>{{ contact.description }}</p> -->
+        </div>
+        <div class="row">
+            <div class="col-md-5 contact-info">
+                <div class="single-info">
+                    <h5>Phone (USA)</h5>
+                    <p>{{ settings.phone_us }}</p>
+                </div>
+                <div class="single-info">
+                    <h5>Phone (Singapore)</h5>
+                    <p>{{ settings.phone_sg }}</p>
+                </div>
+                <div class="single-info">
+                    <h5>Email</h5>
+                    <p><a href="mailto://{{ settings.email }}">{{ settings.email }}</a></p>
+                </div>
+                <!--
+                <div class="single-info">
+                    <h5>Address (USA)</h5>
+                    <p>{{ settings.address_us }}</p>
+                </div>
+                -->
+                <div class="single-info">
+                    <h5>Address</h5>
+                    <p>{{ settings.address_sg }}</p>
+                </div>
+                
+                <div class="single-info">
+                    <h5>Social</h5>
+                    <p>
+                        {% for social in settings.socials %}
+                            <a href="{{ social.url }}" class="fa fa-{{ social.name }}"> &nbsp; {{ social.name }} : {{ social.id }}</a>
+                            <br>
+
+                        {% endfor %}
+                    </p>
+                </div>
+                
+            </div>
+        <div class="col-md-7">
+        <!--
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLScn1wTv8988CT0j_mCdyhWsR8ePKRXiO0lgrLoV-nwONdMoHA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;" name="contact-page" id="contact-page" netlify class="contact-form">
+-->
+
+                 <form action="https://docs.google.com/forms/d/e/1FAIpQLScn1wTv8988CT0j_mCdyhWsR8ePKRXiO0lgrLoV-nwONdMoHA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;" name="contact-page" id="contact-page" class="contact-form">
+
+
+                    <div class="row">
+                    <!--
+                        <div class="col-lg-6">
+                        Name*
+                        </div>
+                        <div class="col-lg-6">
+                        Email*
+                        </div>
+                    -->
+                        <div class="col-lg-6">
+                            <input name="entry.2005620554" id="entry.2005620554" type="text" placeholder="Name*" required>
+                        </div>
+                                                <div class="col-lg-6">
+                        <input name="entry.1166974658" id="entry.1166974658" type="text" placeholder="Phone">
+                        </div>
+                        
+                    <!--
+                        <div class="col-lg-6">
+                        Phone
+                        </div>
+                        <div class="col-lg-6">
+                        Confirm Email*
+                        <span id="email_confirm_error"></span> 
+                        </div>
+                    -->
+                        <div class="col-lg-6">
+                            <input name="entry.1045781291" id="entry.1045781291" type="email" placeholder="Email*" required>
+                                <!--    <span id="email_confirm_error"></span>  -->
+                        </div>
+                        <div class="col-lg-6">
+                            <input name="entry.1065046570" id="entry.1065046570" type="email" placeholder="Enter your email address again*" onblur="confirmEmail()" onfocus="confirmEmailClear();">
+                        </div>
+                        <!--
+                        <div class="col-lg-12">
+                        Message
+                        </div>
+                        -->
+                        <div class="col-lg-12">
+                            <textarea name="entry.839337160" id="entry.839337160" placeholder="Message"></textarea>
+                        </div>
+<!--
+                        <div class="col-lg-6">
+                        <input class="jCaptcha" type="text" placeholder="Type in result please">
+                        </div>
+                        -->
+                           <div class="col-lg-4" id="submit-contact-form"  style="text-align:center;">
+                        <!--    
+                        </div>
+                    
+                        <div class="col-lg-8" style="text-align:center;">
+                        -->
+                            <input class="button" type="submit" value="Send Message">
+                        </div>
+                         <div class="col-lg-12" style="text-align:center;">
+                            * Required <span id="email_confirm_error"></span> 
+                        </div>
+                     
+                    </div>
+                </form>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"onload="if(submitted) {window.location='{{ '/thankyou#anc_contact' | url }}';}"></iframe>
+                <!--
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contactformsubmitted %}
+
+</div>
+
+{% endblock content %}

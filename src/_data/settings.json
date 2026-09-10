@@ -1,0 +1,19 @@
+{
+    "phone_us": "1 (650) xxx-xxxx",
+    "phone_sg": "65 xxxx xxxx",
+    "email": "wzmsystems@gmail.com",
+    "address_us": "5069 Meridian Ave, San Jose, CA 95125, USA",
+    "address_sg": "xxxx xxxx Singapore",
+    "socials": [
+        {
+            "name": "whatsapp",
+            "url": "https://api.whatsapp.com/send?phone=1650xxxxxxx",
+            "id": "1 xxx xxxx xxxxx"
+        },
+        {
+            "name": "wechat",
+            "url": "weixin://dl/chat?wzmsystems",
+            "id": "wzmsystems"
+        }
+    ]
+}
